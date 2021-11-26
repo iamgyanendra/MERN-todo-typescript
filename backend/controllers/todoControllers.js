@@ -1,4 +1,5 @@
 const Todo = require("../models/todo");
+const ApiFeatures = require("../utils/apifeatures");
 
 
 //Create todo
@@ -21,7 +22,9 @@ exports.addTodos = async(req, res)=>{
 //Read todo
 exports.getTodos = async(req, res)=>{
     try{
-        const todo = await Todo.find();
+        const apiFeature = new ApiFeatures(Todo.find(), req.query).search()
+        
+        const todo = await apiFeature.query;
         res.status(200).json({
             success:true,
             todo

@@ -80,7 +80,7 @@ body{
     
     padding: 0.5rem 1rem;
     border: 1px solid #2364d2;
-    border-radius: 30px;
+    border-radius: 15px;
     display: block;
     margin: 0.3rem 1rem 5px 0;
 
@@ -88,4 +88,12 @@ body{
 .Form label{
     margin-left: 5px;
     font-weight: bold;
+}
+textarea{
+    margin-top: 15px;
+    border-radius: 15px;
+    border-color: #2364d2;
+    padding: 10px;
+    resize: none;
+
 }

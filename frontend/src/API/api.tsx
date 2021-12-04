@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "http://localhost:4000/api/v1",
+    baseURL: "https://mern-todoserver.herokuapp.com/api/v1",
   
   });

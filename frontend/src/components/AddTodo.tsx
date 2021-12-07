@@ -15,7 +15,7 @@ const AddTodo: React.FC<Props> = (props) => {
     e.preventDefault();
     props.setText({ ...props.text, [e.target.name]: e.target.value });
   };
-  // console.log(props.text);
+
   const addTodo = async (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
@@ -23,9 +23,9 @@ const AddTodo: React.FC<Props> = (props) => {
       await TodoService.create(props.text);
 
       props.setText(props.initialValues);
-      props.setSubStatus(true);
+     
     } catch (error) {
-      console.log("something is wrong");
+      console.log(error);
     }
   };
 
@@ -53,6 +53,7 @@ const AddTodo: React.FC<Props> = (props) => {
                 type="text"
                 id="title"
                 required
+                value={props.text.name}
                 onChange={(e) => onValueChange(e)}
                 name="name"
               />
@@ -62,6 +63,7 @@ const AddTodo: React.FC<Props> = (props) => {
               <input
                 type="text"
                 id="description"
+                value={props.text.description}
                 required
                 onChange={(e) => onValueChange(e)}
                 name="description"

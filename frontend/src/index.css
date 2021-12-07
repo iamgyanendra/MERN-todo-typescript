@@ -6,19 +6,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
 }
 body{
     
     background-color: #ddeefc;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;
- 
 }
 .App{
     max-width: 720px;
-    margin: 4rem auto;
-    
+    margin: 4rem auto; 
 }
 .App > h1 {
     text-align: center;
@@ -32,7 +29,6 @@ body{
     padding: 0.5rem 1rem;
     border: 1px solid #2364d2;
     border-radius: 15px;
-  
 }
 .card-button button {
     background: #2364d2;
@@ -43,7 +39,6 @@ body{
     color: #fff;
     margin: 2px;
     box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
-    
     
 }
 
